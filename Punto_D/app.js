@@ -64,3 +64,35 @@ for (let i = 1; i <= 5; i++) {
     console.log("Resultado: Reprobado");
   }
 }
+/* Ejercicio 5
+Crea un programa que: simule la venta de productos. El usuario podrá registrar la 
+compra de varios artículos hasta que decida no comprar más. Se debe calcular el total 
+de la compra y aplicar un descuento del 10% si el valor supera los $100.000.*/
+
+let totalCompra = 0;
+let continuar = true;
+
+while (continuar) {
+    let precio = parseFloat(prompt("Ingrese el precio del producto (o 0 para terminar):"));
+
+    if (precio === 0 || isNaN(precio)) {
+        continuar = false;
+    } else {
+        totalCompra += precio;
+    }
+}
+
+let descuento = 0;
+if (totalCompra > 100000) {
+    descuento = totalCompra * 0.10;
+}
+
+let precioFinal = totalCompra - descuento;
+
+alert("Resumen de la compra:\n" +
+      "Total sin descuento: $" + totalCompra.toLocaleString() + "\n" +
+      "Descuento aplicado: $" + descuento.toLocaleString() + "\n" +
+      "Total a pagar: $" + precioFinal.toLocaleString());
+
+
+
