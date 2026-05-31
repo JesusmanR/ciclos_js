@@ -95,4 +95,30 @@ alert("Resumen de la compra:\n" +
       "Total a pagar: $" + precioFinal.toLocaleString());
 
 
+/* Ejercicio 6
+Crea un programa que: genere un número aleatorio entre 1 y 20. El usuario intentará 
+adivinarlo y el ciclo repetirá los intentos hasta que lo logre. Cada vez que falle, 
+el programa debe indicar si el número buscado es mayor o menor que el ingresado.
+*/
+
+const numeroSecreto = Math.floor(Math.random() * 20) + 1;
+
+let intento;
+let encontrado = false;
+
+while (!encontrado) {
+    intento = parseInt(prompt("Adivina el número (entre 1 y 20):"));
+
+    if (intento === numeroSecreto) {
+        alert("🎉 ¡Correcto! El número era " + numeroSecreto);
+        encontrado = true;
+    } else if (intento < numeroSecreto) {
+        alert("❌ El número secreto es mayor que " + intento);
+    } else if (intento > numeroSecreto) {
+        alert("❌ El número secreto es menor que " + intento);
+    } else {
+        alert("⚠️ Ingresa un número válido.");
+    }
+}
+
 
