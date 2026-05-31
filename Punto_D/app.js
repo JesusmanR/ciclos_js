@@ -15,3 +15,16 @@ for (let num = 2; num <= 50; num++) {
     console.log(num);
   }
 }
+
+// Ejercicio 2: Tabla de multiplicar personalizada
+// El usuario ingresa un número y se muestra su tabla hasta el 12
+// Se usa un ciclo while para repetir si el usuario desea otra tabla
+
+let continuar = true;
+while (continuar) {
+  let numero = parseInt(prompt("Ingrese un número:"));
+  for (let i = 1; i <= 12; i++) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
+  }
+  continuar = confirm("¿Desea consultar otra tabla?");
+}
