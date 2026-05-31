@@ -46,4 +46,21 @@ while (saldo > 0) {
   }
 }
 
-//
+// Ejercicio 4: Promedio de notas
+// Se ingresan 3 notas por cada estudiante
+// Se calcula el promedio y se determina si aprueba o reprueba
+
+for (let i = 1; i <= 5; i++) {
+  let nota1 = parseFloat(prompt(`Ingrese nota 1 del estudiante ${i}:`));
+  let nota2 = parseFloat(prompt(`Ingrese nota 2 del estudiante ${i}:`));
+  let nota3 = parseFloat(prompt(`Ingrese nota 3 del estudiante ${i}:`));
+
+  let promedio = (nota1 + nota2 + nota3) / 3;
+  console.log(`Estudiante ${i} - Promedio: ${promedio}`);
+
+  if (promedio >= 3.0) {
+    console.log("Resultado: Aprobado");
+  } else {
+    console.log("Resultado: Reprobado");
+  }
+}
