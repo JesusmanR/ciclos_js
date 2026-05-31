@@ -122,3 +122,30 @@ while (!encontrado) {
 }
 
 
+/* Ejercicio 7
+Crea un programa que: permita al usuario ingresar 10 números. Al final, muestra 
+cuántos fueron pares y cuántos impares. */
+
+let pares = 0;
+let impares = 0;
+
+for (let i = 1; i <= 10; i++) {
+    let numero = parseInt(prompt("Ingrese el número " + i + ":"));
+
+    if (isNaN(numero)) {
+        alert("⚠️ Valor inválido, se contará como 0");
+        numero = 0;
+    }
+
+    if (numero % 2 === 0) {
+        pares++;
+    } else {
+        impares++;
+    }
+}
+
+alert("Resultados:\n" +
+      "Cantidad de números pares: " + pares + "\n" +
+      "Cantidad de números impares: " + impares);
+
+
