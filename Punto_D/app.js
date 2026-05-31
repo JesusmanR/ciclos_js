@@ -28,3 +28,22 @@ while (continuar) {
   }
   continuar = confirm("¿Desea consultar otra tabla?");
 }
+
+// Ejercicio 3: Cajero automático
+// El usuario inicia con un saldo y puede retirar varias veces
+// Se valida que el retiro no supere el saldo disponible
+
+const saldoInicial = 500000;
+let saldo = saldoInicial;
+
+while (saldo > 0) {
+  let retiro = parseInt(prompt("Ingrese el valor a retirar:"));
+  if (retiro <= saldo) {
+    saldo -= retiro;
+    console.log("Retiro exitoso. Saldo restante:", saldo);
+  } else {
+    console.log("Error: fondos insuficientes.");
+  }
+}
+
+//
