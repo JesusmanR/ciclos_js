@@ -149,3 +149,30 @@ alert("Resultados:\n" +
       "Cantidad de números impares: " + impares);
 
 
+/* Ejercicio 8
+Crea un programa que: solicite un usuario y contraseña. El programa debe permitir 
+hasta 3 intentos; si el usuario falla en todos, mostrar un mensaje de “Acceso denegado”. 
+Si acierta, mostrar “Bienvenido”. */
+
+const USUARIO_CORRECTO = "admin";
+const CONTRASENA_CORRECTA = "1234";
+
+let intentos = 0;
+let accesoConcedido = false;
+
+while (intentos < 3 && !accesoConcedido) {
+    let usuario = prompt("Ingrese su usuario:");
+    let contrasena = prompt("Ingrese su contraseña:");
+
+    if (usuario === USUARIO_CORRECTO && contrasena === CONTRASENA_CORRECTA) {
+        alert("✅ Bienvenido");
+        accesoConcedido = true;
+    } else {
+        intentos++;
+        alert("❌ Usuario o contraseña incorrectos. Intento " + intentos + " de 3.");
+    }
+}
+
+if (!accesoConcedido) {
+    alert("🚫 Acceso denegado");
+}
